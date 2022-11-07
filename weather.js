@@ -32,7 +32,7 @@ async function weatherupdate(city) {
         let t = new Date();
         let h = t.getHours();
         var val = result.weather[0].main
-        if (val == "Clear" && t >= 18)
+        if (val == "Clear" && h >= 18)
             val = "clear";
         weathericon.innerHTML = `<h1> ${obj[val]}
             <h5 class="my-3">${val}</h5>
